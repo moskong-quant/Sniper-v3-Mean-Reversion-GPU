@@ -60,3 +60,8 @@ To ensure the strategy is not curve-fitted, we randomized trade sequences to sim
 ├── scripts/             # Training, Preprocessing & Backtesting
 ├── models/              # XGBoost model weights (.json)
 └── output/              # Performance plots & CSV Reports
+
+
+⚖️ License
+This project is licensed under the MIT License—free for educational and research use.
+
