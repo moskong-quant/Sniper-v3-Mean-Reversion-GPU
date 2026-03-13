@@ -205,3 +205,22 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# =================================================
+# Sniper v3.0 - Private Strategy & Data Protection
+# =================================================
+
+# 1. บล็อกโฟลเดอร์ข้อมูล (ใหญ่และเป็นความลับ)
+data/
+output/reports/
+
+# 2. บล็อกโมเดล AI (ห้ามใครก๊อปปี้สมองของบอท)
+models/*.json
+models/*.model
+models/*.joblib
+
+# 3. บล็อกค่าพารามิเตอร์ลับ (หัวใจของระบบ)
+config/settings.py
+
+# 4. บล็อกไฟล์ประวัติการเทรดจริง (ถ้ามี)
+live/logs/
