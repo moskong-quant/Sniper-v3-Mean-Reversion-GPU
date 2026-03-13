@@ -1,0 +1,33 @@
+# =================================================================
+# Sniper v3.0 - Project Configuration Template
+# =================================================================
+# คำแนะนำ: ก๊อปปี้ไฟล์นี้แล้วเปลี่ยนชื่อเป็น 'settings.py' 
+# จากนั้นจึงใส่ค่าพารามิเตอร์จริงของท่าน
+# =================================================================
+
+import os
+
+# --- 📂 Path Configuration ---
+# กำหนด Path พื้นฐานสำหรับโปรเจกต์
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DATA_PATH = os.path.join(PROJECT_ROOT, 'data/processed/eurusd_m1.parquet')
+MODEL_SAVE_PATH = os.path.join(PROJECT_ROOT, 'models/MREV_1MIN_v1.json')
+
+# --- 📊 Strategy Parameters (Public/Standard Values) ---
+# เราใส่ค่ามาตรฐานทั่วไปไว้ เพื่อไม่ให้สูตรลับหลุด
+Z_THRESHOLD = 2.0          # ค่ามาตรฐานทางสถิติ
+WINDOW_SIZE = 20           # จำนวนแท่งเทียนที่ใช้คำนวณ Mean
+ML_PROB_LIMIT = 0.50       # ค่าความเชื่อมั่นขั้นต่ำ (50%)
+
+# --- 🛡️ Risk Management (Template Values) ---
+ATR_TP_MULT = 1.0          # ตัวคูณ Take Profit
+ATR_SL_MULT = 1.0          # ตัวคูณ Stop Loss
+HOLD_BARS = 5              # ระยะเวลาถือครองสูงสุด (แท่ง)
+SPREAD_COST = 0.00010      # ค่า Spread โดยประมาณ (1 Pip)
+
+# --- 🧠 XGBoost Hyperparameters (Default Values) ---
+# ค่าเริ่มต้นสำหรับเทรนโมเดล (ไม่ใช่ค่าที่ Optimized แล้ว)
+XGB_N_ESTIMATORS = 100
+XGB_MAX_DEPTH = 3
+XGB_LEARNING_RATE = 0.1
+XGB_DEVICE = 'cuda'        # ใช้ 'cpu' หากไม่มี GPU

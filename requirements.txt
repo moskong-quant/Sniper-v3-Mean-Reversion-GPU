@@ -1,0 +1,15 @@
+# --- Data Processing & Math ---
+pandas
+numpy
+pyarrow
+
+# --- Machine Learning & GPU ---
+xgboost
+numba
+
+# --- Visualization & Utilities ---
+matplotlib
+tqdm
+
+# --- Trading Integration ---
+MetaTrader5
